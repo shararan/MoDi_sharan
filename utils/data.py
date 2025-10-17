@@ -30,7 +30,7 @@ class openpose_joints(object):
         multiple_names =  isinstance(joint_names, np.ndarray)
         if not multiple_names:
             joint_names = np.array([joint_names])
-        indices = np.zeros(joint_names.shape, dtype=np.int)
+        indices = np.zeros(joint_names.shape, dtype=int)
         for i, name in enumerate(joint_names):
             try:
                 idx = np.where(self.oredered_joint_names == name)[0][0]

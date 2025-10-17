@@ -326,7 +326,7 @@ def setup_env(args, get_traits=False):
 def load_all_form_checkpoint(ckpt_path, args, return_motion_data=False):
     """Load everything from the path"""
 
-    checkpoint = torch.load(ckpt_path)
+    checkpoint = torch.load(ckpt_path, weights_only=False)
 
     args = get_ckpt_args(args, checkpoint['args'])
 
